@@ -40,7 +40,6 @@ body {
     margin: 50px auto;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    animation: spin-tails 3s forwards;
 }
 
 .coin img {
@@ -67,5 +66,15 @@ body {
 
     100% {
         transform: rotateX(1800deg);
+    }
+}
+
+@keyframes spin-heads {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(2160deg);
     }
 }

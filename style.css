@@ -34,20 +34,21 @@ body {
 }
 
 .coin {
-    border: 1px solid black;
     height: 150px;
     width: 150px;
     position: relative;
     margin: 50px auto;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    animation: spin-tails 3s forwards;
 }
 
 .coin img {
     width: 145px;
 }
 
-.heads,.tails {
+.heads,
+.tails {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -56,5 +57,15 @@ body {
 }
 
 .tails {
-    transform: rotateX('180deg');
+    transform: rotateX(180deg);
+}
+
+@keyframes spin-tails {
+    0% {
+        transform: rotateX(0);
+    }
+
+    100% {
+        transform: rotateX(1800deg);
+    }
 }

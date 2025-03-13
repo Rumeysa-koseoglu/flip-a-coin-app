@@ -32,3 +32,29 @@ body {
     font-weight: 500;
     line-height: 25px;
 }
+
+.coin {
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.coin img {
+    width: 145px;
+}
+
+.heads,.tails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tails {
+    transform: rotateX('180deg');
+}

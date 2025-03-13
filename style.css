@@ -25,3 +25,10 @@ body {
     -webkit-perspective: 300px;
     perspective: 300px;
 }
+
+.stats {
+    text-align: right;
+    color: #6c584f;
+    font-weight: 500;
+    line-height: 25px;
+}

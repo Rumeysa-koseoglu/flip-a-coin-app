@@ -21,11 +21,11 @@ flipBtn.addEventListener("click", () => {
     setTimeout(updateStats, 3000);
     disableButton();
 });
-function updateStats() { 
+function updateStats() {
     document.querySelector("#heads-count").
-    textContent = `Heads: ${heads}`;
+        textContent = `Heads: ${heads}`;
     document.querySelector("#tails-count").
-    textContent = `Tails: ${tails}`;
+        textContent = `Tails: ${tails}`;
 }
 
 function disableButton() {
@@ -34,3 +34,9 @@ function disableButton() {
         flipBtn.disabled = false;
     }, 3000);
 }
+resetBtn.addEventListener("click", () => {
+    coin.style.transform = "rotateX(0)";
+    heads = 0;
+    tails = 0;
+    updateStats();
+});

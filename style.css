@@ -38,6 +38,7 @@ body {
     width: 150px;
     position: relative;
     margin: 50px auto;
+    /* Enable 3D transformations so the coin can rotate realistically */
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -46,30 +47,31 @@ body {
     width: 145px;
 }
 
+/*represent the two sides of the coin*/
 .heads,
 .tails {
-    position: absolute;
+    position: absolute; /* places both faces on top of each other*/
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /*hides the backside when flipped*/
 }
 
 .heads {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg);/* keep heads facing up*/
 }
 
 .tails {
-    transform: rotateX(180deg);
+    transform: rotateX(180deg);/*rotates tails to face down initially*/
 }
 
 @keyframes spin-tails {
     0% {
-        transform: rotateX(0);
+        transform: rotateX(0); /*start at 0 deg*/
     }
 
     100% {
-        transform: rotateX(1980deg);
+        transform: rotateX(1980deg); /*spin 1980 degrees (11 full turns) and stop with tails facing up*/
     }
 }
 
@@ -79,7 +81,7 @@ body {
     }
 
     100% {
-        transform: rotateX(2160deg);
+        transform: rotateX(2160deg);/*stop with heads facing up*/
     }
 }
 

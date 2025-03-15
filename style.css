@@ -93,7 +93,7 @@ body {
 button {
     width: 120px;
     padding: 10px 0;
-    border: 3.5px solid #eebeb0;
+    border: 2px solid #eebeb0;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -111,5 +111,5 @@ button {
 
 #reset-button {
     background-color: #e9e3d5;
-    color: #eebeb0;
+    color: #ed9c84;
 }
